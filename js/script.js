@@ -1,13 +1,13 @@
 $(document).ready(function() { 
     
-    // 1. Configuración y Activación de Booklet.js (La sintaxis está corregida)
+    // 1. Configuración y Activación de Booklet.js
     $("#revista").booklet({
         width: 1000, 
         height: 600, 
         speed: 800,
         pageNumbers: true, 
-        arrows: true, // Muestra las flechas de navegación
-        mouse: true, // Permite hacer clic o arrastrar
+        arrows: true, 
+        mouse: true, 
         closed: false, 
         autoCenter: true, 
         shadows: true, 
@@ -22,9 +22,9 @@ $(document).ready(function() {
         src: ['sounds/pasar-pagina.mp3']
     });
 
-    // 3. Conecta el audio al evento de pasar página (Sintaxis corregida)
+    // 3. Conecta el audio al evento de pasar página
     $("#revista").bind("change", function(event, data) {
         flipSound.play();
     });
 
-    // 
+}); // <-- ESTA LÍNEA ES LA CORRECCIÓN CLAVE
