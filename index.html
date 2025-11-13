@@ -3,74 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Revista Interactiva 📖</title>
+  <title>Portafolio Interactivo 📖</title>
 
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- BookBlock CSS -->
+  <link rel="stylesheet" href="css/bookblock.css">
+  <link rel="stylesheet" href="css/style.css">
 
-  <!-- Tu hoja de estilos -->
-  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/modernizr.custom.js"></script>
 </head>
 <body>
 
-  <!-- CONTENEDOR PRINCIPAL -->
-  <div class="swiper">
-    <div class="swiper-wrapper">
-      <!-- Cada página -->
-      <div class="swiper-slide">
-        <div class="content">
-          <h2>Bienvenido a mi Portafolio</h2>
-          <p>Servicios de mantenimiento.</p>
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="content">
-          <h2>Electricidad ⚡</h2>
-          <p>Instalaciones, reparación y mantenimiento.</p>
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="content">
-          <h2>Plomería 🚰</h2>
-          <p>Detección de fugas, cambio de grifería, y más.</p>
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="content">
-          <h2>Pintura 🎨</h2>
-          <p>Interior y exterior, acabados profesionales.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Botones -->
-    <div class="buttons">
-      <button id="prev">◀️ Anterior</button>
-      <button id="next">Siguiente ▶️</button>
-    </div>
+  <!-- CONTENEDOR DEL LIBRO -->
+  <div id="bb-bookblock" class="bb-bookblock">
+    <div class="bb-item"><div class="content"><h2>Bienvenido a mi Portafolio</h2><p>Servicios de mantenimiento profesional.</p></div></div>
+    <div class="bb-item"><div class="content"><h2>Electricidad ⚡</h2><p>Instalaciones, reparación y mantenimiento.</p></div></div>
+    <div class="bb-item"><div class="content"><h2>Plomería 🚰</h2><p>Detección de fugas, cambio de grifería, y más.</p></div></div>
+    <div class="bb-item"><div class="content"><h2>Pintura 🎨</h2><p>Interior y exterior, acabados profesionales.</p></div></div>
   </div>
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- BOTONES -->
+  <nav class="nav-buttons">
+    <button id="bb-nav-prev">◀️ Anterior</button>
+    <button id="bb-nav-next">Siguiente ▶️</button>
+  </nav>
 
-  <!-- Script personalizado -->
+  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+  <a href="https://wa.me/573001112233" target="_blank" class="whatsapp-btn" title="Contáctame por WhatsApp">
+    💬
+  </a>
+
+  <!-- JS -->
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/jquerypp.custom.js"></script>
+  <script src="js/jquery.bookblock.js"></script>
+
   <script>
-  const swiper = new Swiper('.swiper', {
-    effect: 'flip', // efecto tipo libro
-    speed: 1200,    // velocidad de giro
-    allowTouchMove: true,
-    grabCursor: true,
-    slidesPerView: 1,
-    flipEffect: {
-      slideShadows: true, // sombras activas
-    },
-  });
+    $(function() {
+      var Page = (function() {
+        var config = {
+          $bookBlock: $('#bb-bookblock'),
+          $navNext: $('#bb-nav-next'),
+          $navPrev: $('#bb-nav-prev')
+        };
 
-  document.getElementById('next').addEventListener('click', () => swiper.slideNext());
-  document.getElementById('prev').addEventListener('click', () => swiper.slidePrev());
+        var init = function() {
+          config.$bookBlock.bookblock({
+            speed: 1000,
+            shadowSides: 0.8,
+            shadowFlip: 0.7
+          });
+          initEvents();
+        };
+
+        var initEvents = function() {
+          config.$navNext.on('click touchstart', function() {
+            config.$bookBlock.bookblock('next');
+            return false;
+          });
+          config.$navPrev.on('click touchstart', function() {
+            config.$bookBlock.bookblock('prev');
+            return false;
+          });
+
+          $(document).keydown(function(e) {
+            var key = e.which;
+            if (key === 37) config.$bookBlock.bookblock('prev');
+            if (key === 39) config.$bookBlock.bookblock('next');
+          });
+        };
+
+        return { init: init };
+      })();
+
+      Page.init();
+    });
   </script>
 
 </body>
