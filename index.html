@@ -3,59 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portafolio HS 📖</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Portafolio Hogar Seguro - Versión 1.4</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
-  <div class="book">
-    <!-- Página 1 -->
-    <div class="page show" id="page1">
-      <div class="content">
-        <h2>Bienvenido a mi v3 Portafolio</h2>
-        <p>Servicios de mantenimiento para el hogar y oficina.</p>
-        <small class="version">Versión 1.3</small>
+
+  <div class="swiper">
+    <div class="swiper-wrapper">
+
+      <!-- Página 1 -->
+      <div class="swiper-slide">
+        <div class="content">
+          <h2>Bienvenido a mi Portafolio</h2>
+          <p>Servicios de mantenimiento para el hogar y oficina.</p>
+          <span class="version">Versión 1.4</span>
+        </div>
+      </div>
+
+      <!-- Página 2 -->
+      <div class="swiper-slide">
+        <div class="content">
+          <h2>Electricidad ⚡</h2>
+          <p>Instalaciones, reparación y mantenimiento de redes eléctricas.</p>
+        </div>
+      </div>
+
+      <!-- Página 3 -->
+      <div class="swiper-slide">
+        <div class="content">
+          <h2>Plomería 🚰</h2>
+          <p>Detección de fugas, cambio de grifería y mantenimiento general.</p>
+        </div>
+      </div>
+
+      <!-- Página 4 -->
+      <div class="swiper-slide">
+        <div class="content">
+          <h2>Pintura 🎨</h2>
+          <p>Interior y acabados profesionales.</p>
+        </div>
       </div>
     </div>
 
-    <!-- Página 2 -->
-    <div class="page" id="page2">
-      <div class="content">
-        <h2>Electricidad ⚡</h2>
-        <p>Instalaciones, reparación y mantenimiento de redes eléctricas.</p>
-      </div>
-    </div>
-
-    <!-- Página 3 -->
-    <div class="page" id="page3">
-      <div class="content">
-        <h2>Plomería 🚰</h2>
-        <p>Detección de fugas, cambio de grifería y mantenimiento general.</p>
-      </div>
-    </div>
-
-    <!-- Página 4 -->
-    <div class="page" id="page4">
-      <div class="content">
-        <h2>Pintura 🎨</h2>
-        <p>Interior, exterior y acabados decorativos profesionales.</p>
-      </div>
+    <!-- Botones -->
+    <div class="buttons">
+      <button id="prev">◀️ Anterior</button>
+      <button id="next">Siguiente ▶️</button>
     </div>
   </div>
 
-  <!-- BOTONES -->
-  <div class="buttons">
-    <button id="prev">◀️ Anterior</button>
-    <button id="next">Siguiente ▶️</button>
-  </div>
+  <!-- Botón WhatsApp -->
+  <a href="https://wa.me/573057505025" target="_blank" class="whatsapp-btn">
+    💬
+  </a>
 
-  <!-- BOTÓN DESCARGAR PDF -->
-  <button id="pdf-download" class="pdf-btn">📄 Descargar Portafolio (PDF)</button>
+  <!-- Botón descargar PDF -->
+  <button id="downloadPDF" class="pdf-btn">📄 Descargar Portafolio (PDF)</button>
 
-  <!-- WHATSAPP -->
-  <a href="https://wa.me/573057505025" target="_blank" class="whatsapp-btn" title="Contáctame en WhatsApp">💬</a>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-
