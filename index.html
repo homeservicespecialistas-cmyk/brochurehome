@@ -1,128 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio de Servicios - Jhon Pérez</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revista Interactiva 📖</title>
 
-  <!-- Estilos -->
-  <link rel="stylesheet" href="css/jquery.bookblock.css">
-  <style>
-    body {
-      background: #f5f5f5;
-      margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      text-align: center;
-    }
+  <link rel="stylesheet" href="css/bookblock.css">
+  <link rel="stylesheet" href="css/style.css">
 
-    h1 {
-      margin-top: 30px;
-      color: #333;
-      font-weight: 600;
-    }
-
-    #flipbook-container {
-      width: 90%;
-      max-width: 1000px;
-      height: 600px;
-      margin: 40px auto;
-      position: relative;
-    }
-
-    .bb-bookblock {
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    .bb-item {
-      background: #fff;
-      padding: 40px;
-      text-align: left;
-    }
-
-    .page-title {
-      font-size: 1.5em;
-      font-weight: bold;
-      margin-bottom: 10px;
-      color: #222;
-    }
-
-    .page-content {
-      font-size: 1em;
-      line-height: 1.6em;
-      color: #444;
-    }
-
-    .nav-buttons {
-      margin-top: 20px;
-    }
-
-    .nav-buttons button {
-      background: #007bff;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      margin: 0 10px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background 0.3s;
-    }
-
-    .nav-buttons button:hover {
-      background: #0056b3;
-    }
-  </style>
-</head>
-
-<body>
-  <h1>📘 Portafolio de Servicios</h1>
-
-  <div id="flipbook-container" class="bb-bookblock">
-    <div class="bb-item">
-      <div class="page-title">Bienvenido</div>
-      <div class="page-content">
-        Este portafolio presenta los servicios de mantenimiento ofrecidos por <strong>Jhon Pérez</strong>.  
-        ¡Explora las páginas para conocer más sobre mi trabajo!
-      </div>
-    </div>
-
-    <div class="bb-item">
-      <div class="page-title">Servicios Generales</div>
-      <div class="page-content">
-        - Mantenimiento eléctrico<br>
-        - Plomería y sanitarios<br>
-        - Pintura interior y exterior<br>
-        - Reparaciones en hogar y oficina
-      </div>
-    </div>
-
-    <div class="bb-item">
-      <div class="page-title">Proyectos Destacados</div>
-      <div class="page-content">
-        Ejecución de obras residenciales y comerciales con enfoque en calidad y seguridad.  
-        Cada proyecto refleja compromiso, puntualidad y atención al detalle.
-      </div>
-    </div>
-
-    <div class="bb-item">
-      <div class="page-title">Contacto</div>
-      <div class="page-content">
-        📞 Tel: +57 300 000 0000<br>
-        ✉️ Correo: jhonperez@example.com<br>
-        📍 Bogotá, Colombia
-      </div>
-    </div>
-  </div>
-
-  <div class="nav-buttons">
-    <button id="bb-prev">⬅️ Anterior</button>
-    <button id="bb-next">➡️ Siguiente</button>
-  </div>
-
-  <!-- Librerías -->
   <script src="js/modernizr.custom.js"></script>
+</head>
+<body>
+
+  <div id="bb-bookblock" class="bb-bookblock">
+    <div class="bb-item"><div class="content"><h2>Bienvenido a mi Portafolio</h2><p>Servicios de mantenimiento.</p></div></div>
+    <div class="bb-item"><div class="content"><h2>Electricidad ⚡</h2><p>Instalaciones, reparación y mantenimiento.</p></div></div>
+    <div class="bb-item"><div class="content"><h2>Plomería 🚰</h2><p>Detección de fugas, cambio de grifería, y más.</p></div></div>
+    <div class="bb-item"><div class="content"><h2>Pintura 🎨</h2><p>Interior y exterior, acabados profesionales.</p></div></div>
+  </div>
+
+  <nav>
+    <button id="bb-nav-prev">◀️ Anterior</button>
+    <button id="bb-nav-next">Siguiente ▶️</button>
+  </nav>
+
   <script src="js/jquery-1.8.3.min.js"></script>
-  <script src="js/jquerypp.custom.js"></script>
   <script src="js/jquery.bookblock.min.js"></script>
   <script src="js/script.js"></script>
 </body>
