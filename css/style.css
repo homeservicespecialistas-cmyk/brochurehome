@@ -85,3 +85,59 @@ body {
   margin: 0;
   overflow: hidden;
 }
+/* --- Versión página completa --- */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #f3f3f3;
+  font-family: 'Poppins', sans-serif;
+}
+
+#bb-bookblock {
+  width: 100%;
+  height: 100vh;
+}
+
+.bb-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh !important;
+  width: 100% !important;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  max-width: 600px;
+  padding: 2rem;
+  text-align: center;
+}
+
+nav {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+nav button:hover {
+  background: #0056b3;
+}
