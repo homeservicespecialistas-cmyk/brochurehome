@@ -2,11 +2,14 @@ $(function() {
 
   var Page = (function() {
 
-    var config = {
-      $bookBlock: $('#bb-bookblock'),
-      $navNext: $('#bb-nav-next'),
-      $navPrev: $('#bb-nav-prev')
-    };
+    var init = function() {
+  config.$bookBlock.bookblock({
+    speed: 800,
+    shadowSides: 0,
+    shadowFlip: 0
+  });
+  initEvents();
+};
 
     var init = function() {
       config.$bookBlock.bookblock({
