@@ -1,86 +1,61 @@
 body {
-  background: #eae7dc;
+  background: #f3f3f3;
+  font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  overflow: hidden;
-  font-family: "Merriweather", serif;
+  margin: 0;
 }
 
-/* Efecto libro */
-.bb-bookblock {
+.bookblock {
   width: 90%;
-  max-width: 480px;
-  height: 70vh;
-  margin-top: 20px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  height: 500px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  background: #fdfaf4 url('https://www.transparenttextures.com/patterns/paper-fibers.png');
-  background-size: cover;
+  overflow: hidden;
+  background: #fff;
 }
 
-/* Páginas del libro */
-.content {
-  text-align: center;
-  padding: 60px 25px;
-}
-
-.content h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #3b3b3b;
-}
-
-.content p {
-  font-size: 1.1rem;
-  color: #444;
-  line-height: 1.5;
-}
-
-/* BOTONES DE NAVEGACIÓN */
-.nav-buttons {
-  margin-top: 20px;
-}
-
-.nav-buttons button {
-  background: #007bff;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  margin: 0 10px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
-}
-
-.nav-buttons button:hover {
-  background: #0056b3;
-  transform: scale(1.05);
-}
-
-/* BOTÓN WHATSAPP */
-.whatsapp-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25d366;
-  color: white;
-  font-size: 1.8rem;
-  border-radius: 50%;
-  width: 55px;
-  height: 55px;
+.bb-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem;
 }
 
-.whatsapp-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  font-weight: bold;
+  padding: 12px 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
