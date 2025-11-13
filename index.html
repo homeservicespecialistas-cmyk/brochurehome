@@ -61,6 +61,22 @@
 
   <!-- Script de configuración -->
   <script>
+    <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Script de control -->
+<script>
+const swiper = new Swiper('.swiper', {
+  direction: 'horizontal',
+  speed: 300,
+  effect: 'flip', // también puedes probar 'slide', 'fade' o 'cube'
+  slidesPerView: 1,
+  allowTouchMove: true,
+});
+
+document.getElementById('next').addEventListener('click', () => swiper.slideNext());
+document.getElementById('prev').addEventListener('click', () => swiper.slidePrev());
+</script>
     const swiper = new Swiper('.swiper', {
       direction: 'horizontal',
       speed: 600,
@@ -74,3 +90,4 @@
   </script>
 </body>
 </html>
+
